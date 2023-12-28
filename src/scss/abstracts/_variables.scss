@@ -1,0 +1,44 @@
+@use 'functions' as *;
+
+/* =================================== */
+/* 🔖 Take example from this and update your variables */
+/* =================================== */
+:root {
+  --section-small: 8rem;
+  --section-medium: 16rem;
+  --section-big: 24rem;
+
+  @media (width <=1200px) {
+    --section-small: 6.4rem;
+    --section-medium: 12rem;
+    --section-big: 16rem;
+  }
+
+  @media (width <=750px) {
+    --section-small: 4rem;
+    --section-medium: 8rem;
+    --section-big: 12rem;
+  }
+}
+
+// 1.0 Font Family
+$ff-season: "the-seasons", sans-serif;
+$ff-poppins: "Poppins", sans-serif;
+
+// 2.0 Font Sizes
+// - Headings
+$fs-heading-h1: rem(54);
+$fs-heading-h2: rem(45);
+$fs-heading-h3: rem(32);
+
+// - Body
+$fs-body-xsmall: rem(12);
+$fs-body-small: rem(15);
+$fs-body-medium: rem(18);
+$fs-body-large: rem(22);
+$fs-body-xlarge: rem(26);
+
+// 3.0 Font Weight
+$fw-small: 200;
+$fw-medium: 500;
+$fw-large: 700;
