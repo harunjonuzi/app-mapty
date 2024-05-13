@@ -22,7 +22,7 @@ description
 Clone the project:
 
 ```bash
-  git clone https://github.com/harunjonuzi/template-vite-javascript.git
+  git clone https://github.com/harunjonuzi/app-mapty.git
 ```
 
 Go to the project directory:

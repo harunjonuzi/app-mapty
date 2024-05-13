@@ -1,9 +1,13 @@
 @use '../abstracts' as *;
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  font-family: $ff-poppins;
+  font-family: 'Manrope', sans-serif;
   font-size: $fs-body-medium;
-  font-weight: $fw-small;
+  font-weight: $fw-medium;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;

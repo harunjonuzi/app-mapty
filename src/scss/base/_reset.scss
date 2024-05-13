@@ -1,5 +1,16 @@
 @use '../abstracts' as *;
 
+:root {
+  --color-brand--1: #ffb545;
+  --color-brand--2: #00c46a;
+
+  --color-dark--1: #2d3439;
+  --color-dark--2: #42484d;
+  --color-light--1: #aaa;
+  --color-light--2: #ececec;
+  --color-light--3: rgb(214, 222, 224);
+}
+
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -24,6 +35,10 @@ html {
 /* Set core body defaults */
 body {
   height: 100dvh;
+  overscroll-behavior-y: none;
+  background-color: #fff;
+  padding: 2.5rem;
+  display: flex;
 }
 
 /* Make images easier to work with */
@@ -33,6 +48,11 @@ picture {
   max-width: 100%;
   display: block;
   object-fit: cover;
+}
+
+a:link,
+a:visited {
+  color: var(--color-brand--1);
 }
 
 /* Inherit fonts for inputs and buttons */
