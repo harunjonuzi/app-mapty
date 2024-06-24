@@ -1,11 +1,11 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: $fs-body-medium;
   font-weight: $fw-medium;
   line-height: 1.5;
