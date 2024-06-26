@@ -37,7 +37,7 @@ class Workout {
     ];
 
     this.description = `${this.type[0].toUppercase()}${this.type.slice(1)} on ${
-      months[this.date.getMonth()]
+      months[this.date.getMonth() + 1]
     } ${this.date.getDate()}`;
   }
 }
@@ -170,6 +170,7 @@ class App {
         return alert("Inputs have to be positive numbers!");
       workout = new Cycling([lat, lng], distance, duration, elevation);
     }
+
     // Add new object to workout array
     this.#workouts.push(workout);
     console.log(workout);
