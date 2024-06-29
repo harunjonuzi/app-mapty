@@ -36,7 +36,7 @@ class Workout {
       "December",
     ];
 
-    this.description = `${this.type[0].toUppercase()}${this.type.slice(1)} on ${
+    this.description = `${this.type[0].toUpperCase()}${this.type.slice(1)} on ${
       months[this.date.getMonth() + 1]
     } ${this.date.getDate()}`;
   }
@@ -74,7 +74,7 @@ class Cycling extends Workout {
   }
 }
 
-/////////////////////////////////////////////////
+////////////////////////////////////////////////////
 // ========== Application Architecture ========== //
 class App {
   #map;
@@ -101,7 +101,6 @@ class App {
   _loadMap(position) {
     const { latitude } = position.coords;
     const { longitude } = position.coords;
-    console.log(`https://google.pt/maps/@${latitude},${longitude}`);
 
     const coords = [latitude, longitude];
     this.#map = L.map("map").setView(coords, 15);
@@ -118,6 +117,21 @@ class App {
     this.#mapEvent = mapE;
     form.classList.remove("hidden");
     inputDistance.focus();
+  }
+
+  _hideForm() {
+    // Empty inputs
+    inputDistance.value =
+      inputDuration.value =
+      inputCadence.value =
+      inputElevation.value =
+        "";
+
+    form.style.display = "none";
+    form.classList.add("hidden");
+    setTimeout(() => {
+      form.style.display = "grid";
+    }, 1000);
   }
 
   _toggleElevationField() {
@@ -182,11 +196,7 @@ class App {
     this._renderWorkout(workout);
 
     // Hide form + clear input fields
-    inputDistance.value =
-      inputDuration.value =
-      inputCadence.value =
-      inputElevation.value =
-        "";
+    this._hideForm();
   }
 
   _renderWorkoutMarker(workout) {
@@ -201,7 +211,9 @@ class App {
           className: `${workout.type}-popup`,
         })
       )
-      .setPopupContent("Weee")
+      .setPopupContent(
+        `${workout.type === "running" ? "🏃" : "🚴"} ${workout.description}`
+      )
       .openPopup();
   }
 
@@ -252,6 +264,8 @@ class App {
       </li>
       `;
     }
+
+    form.insertAdjacentHTML("afterend", html);
   }
 }
 
