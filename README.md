@@ -15,7 +15,7 @@ Easily add your running/cycling workouts on the map, way more advanced than stra
 
 ## Preview
 
-![Preview](public/img/screenshot1.png)
+![Preview](public/img/readme-screenshot1.png)
 
 ## Run Locally
 
