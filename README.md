@@ -1,6 +1,6 @@
 # Application - Mapty
 
-Easily add your running/cycling workouts on the map, way more advanced than strava in my opinion.
+🗺️ Easily add your running/cycling workouts on the map, way more advanced than strava in my opinion.
 
 ## Features
 
