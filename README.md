@@ -1,11 +1,11 @@
-# Title
+# Application - Mapty
 
-description
+Easily add your running/cycling workouts on the map, way more advanced than strava in my opinion.
 
 ## Features
 
--   Responsive
--   Dark/Light Mode
+- LocalStorage
+- Add Running/Cycling workouts on the map
 
 ## Tech Stack
 
@@ -15,7 +15,7 @@ description
 
 ## Preview
 
-![Preview](public/img/readme-screenshot1.png)
+![Preview](public/img/screenshot1.png)
 
 ## Run Locally
 
